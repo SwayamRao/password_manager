@@ -83,24 +83,15 @@ def generate_password(length=12):
     if length < 12:
         raise ValueError("Password length should be at least 12 characters for good security.")
 
-    # Create a pool of characters: uppercase, lowercase, digits, and special characters
     all_characters = string.ascii_letters + string.digits + string.punctuation
-
-    # Ensure the password has at least one character from each category
     password = [
         random.choice(string.ascii_uppercase),
         random.choice(string.ascii_lowercase),
         random.choice(string.digits),
         random.choice(string.punctuation),
     ]
-
-    # Fill the rest of the password length with random characters from the pool
     password += random.choices(all_characters, k=length-4)
-
-    # Shuffle the list to avoid any predictable sequences
     random.shuffle(password)
-
-    # Convert the list to a string and return
     return ''.join(password)
 
 if __name__ == "__main__":
@@ -125,7 +116,7 @@ if __name__ == "__main__":
                 password = generate_password(length=12)
                 print(f"Generated password: {password}")
             else:
-                password = getpass("Enter the password: ")  # Use getpass to hide the input
+                password = getpass("Enter the password: ")  
             add_password(service, username, password, key)
             print(f"\nPassword for {service} added successfully.")
         elif choice == "2":
