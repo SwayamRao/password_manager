@@ -22,7 +22,7 @@ To install the Network Analyzer, follow these steps:
 
 2. Change to the project directory:
     ```bash
-    cd Network_Analyzer
+    cd password_manager
     ```
 
 3. Install the dependencies:
@@ -31,8 +31,8 @@ To install the Network Analyzer, follow these steps:
     ```
 
 ## Usage
-1. Clone the python file.
-2. The default master password is `hello` you can change it when you clone the python file.
+1. Clone the reposatory.
+2. The default master password is `hello` you can change it.
 3. This master password is all that you need to remember.
 4. Now there will be options prompted in the program according to that we can add, retrieve and generate passwords and store usernames with respective passwords based on services we give.
 5. The files `passwords.json` and `secret.key` can be only accessed by the admin.
